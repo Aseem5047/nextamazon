@@ -1,0 +1,472 @@
+/* cart style */
+
+.css-i4bv87-MuiSvgIcon-root {
+	fill: white !important;
+}
+
+.css-ptiqhd-MuiSvgIcon-root {
+	fill: white !important;
+}
+
+.cart__image {
+	background: url("https://ik.imagekit.io/amazon1234/sprite_350x_q7QZkJCVl.png?updatedAt=1627121934264")
+		no-repeat -217px -336px;
+	width: 43px;
+	height: 30px;
+}
+
+/* Address Modal */
+
+.addressModal {
+	-webkit-backdrop-filter: blur(80%);
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.5);
+	/* filter: blur(1px); */
+}
+
+/* .homeScreen > *:not(.addressModal) {
+	background: transparent;
+	filter: blur(3px);
+} */
+
+.blurredAddressModal {
+	filter: blur(1px);
+}
+
+/* Loading */
+
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.loading {
+	width: 4rem;
+	height: 4rem;
+	margin: 0 auto;
+	margin-top: 20rem;
+	border-radius: 50%;
+	border: 3px solid #ccc;
+	border-top-color: var(--clr-primary-5);
+	animation: spinner 0.6s linear infinite;
+}
+
+/* Customizing ScrollBar */
+
+::-webkit-scrollbar {
+	width: 0.5em;
+	background: transparent;
+	cursor: pointer !important;
+	z-index: 0;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	cursor: pointer !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #fcba03;
+	outline: none;
+	cursor: pointer !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	cursor: pointer !important;
+}
+
+.item-container::-webkit-scrollbar {
+	background-color: transparent;
+	display: none;
+}
+
+.categories::-webkit-scrollbar {
+	background-color: transparent;
+	display: none;
+}
+
+.paymentProductScroll::-webkit-scrollbar {
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 10px;
+}
+
+.reviewContainer::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background: transparent;
+	cursor: pointer !important;
+	z-index: 0;
+}
+
+.css-b7k0tb-MuiAutocomplete-listbox::-webkit-scrollbar {
+	display: none;
+}
+
+/* Banner styles */
+
+.banner-img {
+	width: 100%;
+	height: 45rem;
+	z-index: -1;
+	mask-image: linear-gradient(to bottom, white 45%, transparent 50%);
+}
+
+@media only screen and (max-width: 500px) {
+	.banner-img {
+		height: 17rem !important;
+		mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	}
+}
+
+/* Subtotal */
+
+.subtotal {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	width: 350px;
+	height: 200px;
+	padding: 20px;
+	background-color: #efeaea;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	color: black;
+	z-index: 10;
+}
+
+.subtotal > button {
+	background: #fcba03;
+	border-radius: 7px;
+	width: 100%;
+	height: 40px;
+	border: 1px solid;
+	margin-top: 10px;
+	color: #111;
+	border-color: #a88734 #9c7e31 #846a29;
+	cursor: pointer;
+}
+
+/* prime */
+
+.firstContainer {
+	background-image: url("https://m.media-amazon.com/images/G/01/img17/prime/tablet/PMP_NewMember_Hero_desktop_tall._CB462509420_.jpg");
+	background-position: unset;
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 90vw;
+	margin: auto;
+	margin-top: 4.5vh;
+}
+
+/* PrimeSlider */
+
+.mainContainer {
+	background-size: 1200px auto, 100% 100%;
+	background-position: 0px 0px, 0px 0px;
+	background-repeat: no-repeat, repeat;
+	max-width: 100%;
+	height: 210px;
+	bottom: 0;
+	cursor: pointer;
+}
+
+.mainContainer:hover {
+	animation: shake 4s;
+	animation-iteration-count: infinite;
+}
+
+.activeItem {
+	opacity: 1;
+	transform: translateX(0);
+	width: 70vw;
+	background-position: left center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.lastItem {
+	transform: translateX(-100%);
+	max-width: fit-content !important;
+	display: none;
+}
+.nextItem {
+	transform: translateX(100%);
+	max-width: fit-content !important;
+	display: none;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	25% {
+		transform: translate(-1px, -2px) rotate(-15deg);
+	}
+	50% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	75% {
+		transform: translate(3px, 2px) rotate(15deg);
+	}
+	100% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+}
+
+@media only screen and (max-width: 1250px) {
+	.primeFeaturesList {
+		max-width: 95vw;
+		float: unset;
+		margin: -1rem auto 3.5rem auto;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.activeItem {
+		opacity: 1;
+		transform: translateX(0);
+		width: 85%;
+		background-position: left center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	.items-list {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.SliderItemsSub {
+		font-size: 22px;
+	}
+	.SliderItemsDesc {
+		font-size: 15px;
+	}
+	.Entertainment_content {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.activeItem {
+		background-image: none !important;
+		width: 100%;
+	}
+	.SliderItemsContent {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 1rem;
+		gap: 1rem;
+		margin: auto;
+		text-align: center;
+		width: 75%;
+		align-items: center;
+	}
+	.SliderLeft,
+	.SliderRight {
+		background: transparent;
+		color: black;
+		padding: 0.5rem;
+	}
+}
+
+/* Deals */
+
+.DealsContainer {
+	background-image: url("https://m.media-amazon.com/images/G/31/prime/CEO/2018/Sep/SlashPrime/v2/IN-PR-Slash-Prime-Redesign-Deals-banner-1400x350._CB485016077_.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	height: 25rem;
+}
+
+/* Delivery */
+
+.DeliveryContainer {
+	background-image: url("https://m.media-amazon.com/images/G/31/marketing/prime/detail_page/StaticBlade_PrimeDelivery_01._CB485978258_.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	height: 25rem;
+}
+
+/* Gaming */
+
+.GamingContainer {
+	background-image: url("https://m.media-amazon.com/images/G/31/prime/CEO/2018/Sep/SlashPrime/v2/slash-prime-readesign-static-samus-turbo-1400x350._CB642409288_.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	height: 25rem;
+}
+
+/* Rewards */
+
+.RewardContainer {
+	background-image: url("https://m.media-amazon.com/images/G/31/prime/CEO/2018/Sep/SlashPrime/v2/slash-prime-readesign-static-cbcc-1400x350-after-twitch-launch._CB433432781_.jpg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	mix-blend-mode: multiply;
+	height: 25rem;
+}
+
+/* GetStarted */
+
+.GetStartedContainer {
+	background-image: url("https://m.media-amazon.com/images/G/31/marketing/prime/detail_page/FinalCTA_01._CB485300788_.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	height: 30rem;
+}
+
+/* Banners media queries */
+
+@media only screen and (max-width: 850px) {
+	.first_hiddenContainer {
+		background-image: url("https://m.media-amazon.com/images/G/01/img17/prime/tablet/PMP_NewMember_Hero_desktop_tall._CB462509420_.jpg");
+		background-position: unset;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 4.5vh;
+		height: 15rem;
+		width: 100%;
+	}
+
+	.firstContainer {
+		background-image: none;
+		max-width: 100%;
+	}
+
+	.Banner_Content {
+		max-width: 100%;
+		padding: 0rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		color: black !important;
+	}
+
+	.DealsHiddenContainer {
+		background-image: url("https://m.media-amazon.com/images/G/31/prime/CEO/2018/Sep/SlashPrime/v2/IN-PR-Slash-Prime-Redesign-Deals-banner-1400x350._CB485016077_.jpg");
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 15rem;
+		width: 100%;
+	}
+
+	.DealsContainer {
+		background-image: none;
+		max-width: 100%;
+	}
+
+	.GamingHiddenContainer {
+		background-image: url("https://m.media-amazon.com/images/G/31/prime/CEO/2018/Sep/SlashPrime/v2/slash-prime-readesign-static-samus-turbo-1400x350._CB642409288_.jpg");
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 15rem;
+		width: 100%;
+	}
+
+	.GamingContainer {
+		background-image: none;
+		max-width: 100%;
+	}
+
+	.DeliveryHiddenContainer {
+		background-image: url("https://m.media-amazon.com/images/G/31/marketing/prime/detail_page/StaticBlade_PrimeDelivery_01._CB485978258_.png");
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 15rem;
+		width: 100%;
+	}
+
+	.DeliveryContainer {
+		background-image: none;
+		max-width: 100%;
+	}
+
+	.RewardHiddenContainer {
+		background-image: url("https://m.media-amazon.com/images/G/31/prime/CEO/2018/Sep/SlashPrime/v2/slash-prime-readesign-static-cbcc-1400x350-after-twitch-launch._CB433432781_.jpg");
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 10rem;
+		width: 100%;
+		mix-blend-mode: multiply;
+	}
+
+	.RewardContainer {
+		background-image: none;
+		max-width: 100%;
+	}
+
+	.GetStartedHiddenContainer {
+		background-image: url("https://m.media-amazon.com/images/G/31/marketing/prime/detail_page/FinalCTA_01._CB485300788_.jpg");
+		background-position: left;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 18rem;
+		width: 100%;
+	}
+
+	.GetStartedContainer {
+		background-image: none;
+		max-width: 100%;
+	}
+
+	.GetStarted {
+		margin: auto;
+	}
+	.text_content {
+		align-items: center;
+	}
+}
+
+/* Entertainment */
+
+.activeEntertainmentItem {
+	opacity: 1;
+	transform: translateX(0);
+	/* padding: 2.5rem; */
+	width: 15rem;
+}
+.lastEntertainmentItem {
+	transform: translateX(-100%);
+	max-width: fit-content !important;
+	display: none;
+}
+.nextEntertainmentItem {
+	transform: translateX(100%);
+	max-width: fit-content !important;
+	display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+	.primeEntertainment {
+		align-items: center;
+	}
+	.heading {
+		font-size: 2rem;
+	}
+	.Entertainment-list {
+		flex-direction: column;
+		gap: 1.5rem;
+		align-items: center;
+	}
+}

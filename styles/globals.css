@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[#fcba03];
+	}
+}
+
+@layer components {
+	.scrollBar {
+		@apply scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-[black];
+	}
+
+	/* auth */
+
+	.authH2 {
+		@apply font-semibold mb-[5px];
+	}
+	.authButton {
+		@apply bg-[#fcba03] rounded-md mt-[10px] p-[7px] text-black cursor-pointer w-[100%] flex items-center justify-center hover:scale-110;
+	}
+	.authInput {
+		@apply h-[40px] w-[98%] mb-[10px] p-[10px];
+	}
+	.autoComplete .MuiOutlinedInput-root .MuiAutocomplete-input {
+		@apply h-[10px] py-[7.5px] px-[6px] text-white ml-[10px] !min-w-[20vw] md:!min-w-[30vw];
+	}
+
+	/* cart */
+
+	.cart__image {
+		@apply w-[43px] h-[30px];
+	}
+
+	.navbar_text_cart {
+		@apply mt-[13px] font-bold relative -left-[10px];
+	}
+
+	.cart__item {
+		@apply flex justify-center w-[1rem] font-bold relative right-[1.6rem] -top-[3px] text-[#f08805] text-[14px];
+	}
+
+	.cart__item_mobileMenu {
+		@apply font-bold relative left-[20px] -top-[36px] text-[#f08805];
+	}
+
+	/* navbar */
+
+	.user_image {
+		@apply w-[3rem] h-[3rem] rounded-[50%];
+	}
+
+	.header-option {
+		@apply flex flex-col mx-[10px] text-white cursor-pointer hover:text-[#f36100];
+	}
+
+	.header-option1 {
+		@apply text-[12px] font-medium pt-[5px] overflow-ellipsis overflow-auto;
+	}
+
+	.header-option2 {
+		@apply text-[16px] font-semibold cursor-pointer -mt-[4px] overflow-auto;
+	}
+
+	.header-link {
+		@apply text-white mt-[1.5vh];
+	}
+
+	/* banner / ads */
+
+	#banner {
+		@apply absolute top-0 left-0 w-full h-full;
+	}
+
+	#ads {
+		@apply absolute top-0 left-0 w-full h-full m-auto;
+	}
+
+	.activeSlide {
+		@apply opacity-100 transform translate-x-0;
+	}
+
+	.lastSlide {
+		@apply transform -translate-x-full w-full;
+	}
+
+	.nextSlide {
+		@apply transform translate-x-full w-full hidden;
+	}
+
+	.prev {
+		@apply hidden md:flex absolute top-[6rem] md:top-[8rem] left-2 md:left-8 ml-4 text-gray-400 w-[1.5rem] h-[1.5rem]  justify-center items-center cursor-pointer hover:text-white;
+	}
+	.next {
+		@apply hidden md:flex absolute top-[6rem] md:top-[8rem] right-2 md:right-8 mr-4 text-gray-400 w-[1.5rem] h-[1.5rem]  justify-center items-center cursor-pointer hover:text-white;
+	}
+
+	/* headerItems */
+
+	.item-container {
+		@apply flex text-white items-center bg-[#2b2727] fixed top-[4rem] w-full h-[40px] z-10 !overflow-x-scroll overflow-y-hidden;
+	}
+
+	.item-container p {
+		@apply m-[10px] text-[14px] z-50 cursor-pointer hover:text-[#f36100];
+	}
+
+	.item-container span {
+		@apply flex flex-col w-max z-50;
+	}
+
+	/* product */
+
+	#productImg {
+		@apply w-full max-h-[200px] object-contain mb-[15px] mt-[20px] rounded-[15px] cursor-pointer transition transform duration-200 ease-out scale-100;
+	}
+
+	.btn {
+		@apply bg-[#fcba03] cursor-pointer p-[5px] mt-[20px] w-[60%] mx-[20%] hover:scale-110 flex items-center justify-center rounded-md;
+	}
+
+	/* primeSlider */
+
+	.SliderLeft {
+		@apply absolute top-[7.5rem] m-[1vw] bg-gray-400 text-white grid place-items-center cursor-pointer p-[0.75rem] rounded-full left-0 hover:text-white hover:bg-black;
+	}
+	.SliderRight {
+		@apply absolute top-[7.5rem] m-[1vw] bg-gray-400 text-white  grid place-items-center cursor-pointer p-[0.75rem] rounded-full right-0 hover:text-white hover:bg-black;
+	}
+
+	/* Prime Banner */
+
+	.Banner_Content {
+		@apply flex flex-col gap-[0.5rem] md:w-[50%] p-[3rem] py-0 text-black;
+	}
+
+	.subHeading {
+		@apply flex flex-col font-normal;
+	}
+
+	.type {
+		@apply font-semibold;
+	}
+
+	.GetStarted {
+		@apply md:ml-[44%] text-center;
+	}
+
+	.text_content {
+		@apply flex flex-col gap-4 capitalize md:mt-[5rem];
+	}
+	.button_content {
+		@apply flex flex-col gap-[0.5rem] max-w-[25rem] items-center;
+	}
+
+	.button_content span {
+		@apply mt-[20px] text-[0.8rem] md:text-[1rem] cursor-pointer p-[1.2rem] rounded-lg outline-none text-black bg-[#fcba03] font-bold max-w-[22rem] hover:bg-[#e47f0c];
+	}
+
+	/* Entertainment */
+
+	.Entertainment-list {
+		@apply flex relative w-[75vw] h-[20%] p-0 m-auto justify-center;
+	}
+
+	.Entertainment-list li img {
+		@apply w-[15rem] h-[18rem] shadow-lg mix-blend-multiply;
+	}
+	.Entertainment_content {
+		@apply flex flex-col gap-[1rem] m-auto text-center md:text-left md:w-[50%];
+	}
+	.EntertainmentLeft {
+		@apply absolute top-[7.5rem] m-[1vw] text-black grid place-items-center cursor-pointer p-[0.75rem] hover:scale-125 -left-[4.2rem];
+	}
+	.EntertainmentRight {
+		@apply absolute top-[7.5rem] m-[1vw] text-black grid place-items-center cursor-pointer p-[0.75rem] hover:scale-125 -right-[4.2rem];
+	}
+
+	.heading {
+		@apply md:text-[2.75rem];
+	}
+
+	.details {
+		@apply text-[1.2rem];
+	}
+
+	.type {
+		@apply font-medium;
+	}
+}
