@@ -18,7 +18,17 @@ const Dropdown = () => {
         "Home", "New Releases", "Electronics", "Prime", "Mobiles", "Computers", "Fashion", "Trending", "Sports & Fitness"
     ]
 
-    const icons = [<TiSortAlphabeticallyOutline />, <BiNews />, <AiFillThunderbolt />, <SiPrime />, <BiMobileVibration />, <RiComputerLine />, <GiRolledCloth />, <FiTrendingUp />, <MdSportsBasketball />]
+    const icons = [
+        { icon: <TiSortAlphabeticallyOutline />, key: 'alphabetical' },
+        { icon: <BiNews />, key: 'news' },
+        { icon: <AiFillThunderbolt />, key: 'thunderbolt' },
+        { icon: <SiPrime />, key: 'prime' },
+        { icon: <BiMobileVibration />, key: 'mobile' },
+        { icon: <RiComputerLine />, key: 'computer' },
+        { icon: <GiRolledCloth />, key: 'cloth' },
+        { icon: <FiTrendingUp />, key: 'trending' },
+        { icon: <MdSportsBasketball />, key: 'sports' },
+    ];
 
     return (
         <>
@@ -30,11 +40,9 @@ const Dropdown = () => {
                     <div className="flex justify-start bg-[#131921] p-4 fixed top-0 z-20 mt-[4.2rem] min-w-[12rem] shadow-md gap-4 rounded-md text-white">
                         <div className="flex flex-col justify-around">
 
-                            {icons.map((icon, index) => (
+                            {icons.map((item, index) => (
                                 <div key={`icon-${index}`}>
-                                    <span>
-                                        {icon}
-                                    </span>
+                                    {item.icon}
                                 </div>
                             ))}
 
@@ -43,7 +51,7 @@ const Dropdown = () => {
                             {options.map((option, index) => (
                                 <Link href={`/${option.toLowerCase().split(" ").join("")}`} key={`option-${index}`}>
                                     <div className="hover:line-through cursor-pointer">
-                                        <span>{option}</span>
+                                        {option}
                                     </div>
                                 </Link>
                             ))}
