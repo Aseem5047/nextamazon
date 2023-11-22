@@ -117,7 +117,7 @@ const Navbar = () => {
                                         <p className="text-[13px] mt-2 ">Correct Address Provided ?</p>
                                         <button className="authButton md:w-[10rem]" type="submit" onClick={() => setSelectAddress(!selectAddress)}>Save Changes</button>
                                     </div>
-                                    <p className="text-sm mt-2">By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</p>
+                                    <p className="text-sm mt-2">By continuing, you agree to Amazon Conditions of Use and Privacy Notice.</p>
                                     <p className="text-xs text-gray-500">
                                         However, shipments can sometimes arrive early or later than planned.
                                         <br />
