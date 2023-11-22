@@ -28,7 +28,7 @@ const Authenticate = () => {
                 dispatch(setUser(null))
             }
         })
-
+        // react/no-unescaped-entities
     }, [dispatch])
 
     const register = e => {

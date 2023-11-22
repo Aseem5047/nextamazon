@@ -13,6 +13,7 @@ import Link from 'next/link'
 
 const Dropdown = () => {
     const [active, setActive] = useState(false)
+
     const options = [
         "Home", "New Releases", "Electronics", "Prime", "Mobiles", "Computers", "Fashion", "Trending", "Sports & Fitness"
     ]
@@ -29,22 +30,24 @@ const Dropdown = () => {
                     <div className="flex justify-start bg-[#131921] p-4 fixed top-0 z-20 mt-[4.2rem] min-w-[12rem] shadow-md gap-4 rounded-md text-white">
                         <div className="flex flex-col justify-around">
 
-                            {icons.map((icon, index) =>
+                            {icons.map((icon, index) => (
                                 <div key={`icon-${index}`}>
                                     <span>
                                         {icon}
                                     </span>
                                 </div>
-                            )}
+                            ))}
+
                         </div>
                         <div className="flex flex-col justify-evenly">
-                            {options.map((option, index) =>
+                            {options.map((option, index) => (
                                 <Link href={`/${option.toLowerCase().split(" ").join("")}`} key={`option-${index}`}>
                                     <div className="hover:line-through cursor-pointer">
                                         <span>{option}</span>
                                     </div>
                                 </Link>
-                            )}
+                            ))}
+
                         </div>
                     </div>
                 }
