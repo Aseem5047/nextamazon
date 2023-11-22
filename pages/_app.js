@@ -2,9 +2,8 @@ import '../styles/main.css'
 import '../styles/globals.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import { Provider } from 'react-redux'
 import { store } from '../store'
 import { Toaster } from 'react-hot-toast';
@@ -12,7 +11,6 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from 'next/router';
-import NextNProgress from 'nextjs-progressbar';
 import { GoogleOAuthProvider } from '@react-oauth/google'
 
 const progress = new ProgressBar({

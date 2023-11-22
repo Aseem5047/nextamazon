@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import CurrencyFormat from "react-currency-format";
 import toast from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 import { getUser } from '../features/authSlice';
 import { selectBasketItems, selectBasketTotal } from '../features/basketSlice';
+import formatIndianCurrency from '../constants/CurrencyFormater';
 
 const SubTotal = () => {
 
@@ -28,25 +28,16 @@ const SubTotal = () => {
     // console.log(basketTotal);
     return (
         <div className="subtotal">
-            <CurrencyFormat
-                renderText={(value) => (
-                    <>
-                        {/* {console.log(value)} */}
-                        <p>
-                            SubTotal ({basket.length} items) : <strong>{!basket.length > 0 ? "₹ 0" : (value)}</strong>
-                        </p>
-                        <span className="flex items-center">
-                            <input type="checkbox" className="mr-[5px]" />
-                            This order contains a gift
-                        </span>
-                    </>
-                )}
-                decimalScale={2}
-                value={basketTotal}
-                displayType={"text"}
-                thousandSeparator={true}
-                prefix={"₹ "}
-            />
+
+            <>
+                <p>
+                    SubTotal ({basket.length} items) : <strong>{!basket.length > 0 ? "₹ 0" : formatIndianCurrency(basketTotal)}</strong>
+                </p>
+                <span className="flex items-center">
+                    <input type="checkbox" className="mr-[5px]" />
+                    This order contains a gift
+                </span>
+            </>
 
             <button className="hover:scale-105" disabled={!basket.length > 0} onClick={handleCheckout}
                 style={{ background: `${!basket.length > 0 && "#80808021"}` }}

@@ -1,14 +1,11 @@
 import moment from 'moment';
 import React, { useMemo, useState } from 'react'
-import CurrencyFormat from 'react-currency-format';
-import { useSelector } from 'react-redux';
-import { getUser } from '../features/authSlice';
-import { selectBasketItems } from '../features/basketSlice';
+
 import OrderedProduct from './OrderedProduct';
+import formatIndianCurrency from '../constants/CurrencyFormater';
 
 const Order = ({ order }) => {
     const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([])
-    const user = useSelector(getUser);
 
     useMemo(() => {
         const groupedItems = order.data.basket.reduce((results, item) => {
@@ -18,6 +15,9 @@ const Order = ({ order }) => {
         }, {});
         setGroupedItemsInBasket(groupedItems)
     }, [order])
+
+
+
     console.log(order);
 
     return (
@@ -47,7 +47,7 @@ const Order = ({ order }) => {
                 </div>
                 <div className="flex flex-col items-end justify-end">
 
-                    <CurrencyFormat
+                    {/* <CurrencyFormat
                         renderText={(value) => (
                             <>
                                 <h3 className="text-xl font-semibold">Order Total ... {value}</h3>
@@ -59,7 +59,9 @@ const Order = ({ order }) => {
                         displayType={"text"}
                         thousandSeparator={true}
                         prefix={"₹ "}
-                    />
+                    /> */}
+                    <h3 className="text-xl font-semibold">Order Total ...  {formatIndianCurrency(order.data.amount)}</h3>
+
                     <p className="text-lg">
                         <small>{order.id}</small>
                     </p>
