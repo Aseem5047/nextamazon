@@ -92,7 +92,7 @@ const Authenticate = () => {
                             <p className="text-[13px] mt-2 ">SignIn using Google ?</p>
 
                             <button className="authButton" type="submit" onClick={handleAuth}>Google SignIn</button>
-                            <p className="text-xs mt-2">By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</p>
+                            <p className="text-xs mt-2">By continuing, you agree to Amazons Conditions of Use and Privacy Notice.</p>
                         </form>
                         <div className="flex flex-col items-center mt-5 w-[75%]">
                             <p className="text-gray-400">New to Amazon ?</p>
