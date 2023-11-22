@@ -29,9 +29,12 @@ const Product = ({ id, title, image, price, rating, specification, detail, type 
     return (
         <div className="relative text-[black] mt-[1.75rem] max-h-[25rem] max-w-[20rem] w-full transition transform duration-500 ease-out hover:scale-110 hover:shadow-lg p-[1rem]">
 
-            {toggle && <div className="absolute bottom-0 bg-[#000000db] z-10 rounded-lg shadow-md mx-auto left-0 py-2 px-4 max-h-[10rem] overflow-hidden text-center  w-full text-white">
-                <span className="text-white">{specification}</span>
-            </div>}
+            {toggle && (
+                <div className="absolute bottom-0 bg-[#000000db] z-10 rounded-t-lg  mx-auto left-0 pt-2 pb-1 px-4 max-h-auto clamped-text w-full text-white ">
+                    <span className="text-white">{specification}</span>
+                </div>
+            )}
+
 
             <Link href={`/singleProduct/${type}/${id}`}>
 

@@ -48,7 +48,7 @@ const Account = () => {
 
                         <Link data-tip="Account" href={`${user ? "/account" : "/"}`} className=" mt-2">
                             <div className="header-option userInfo">
-                                <div className="flex flex-col items-center text-black">
+                                <div className="flex flex-col items-center text-black hover:text-[#f36100]">
                                     <span className="header-option1">Hello, {user ? user?.displayName?.toUpperCase() || user.email : "Guest"}</span>
                                     <span className="header-option2">Account & Lists</span>
                                 </div>
