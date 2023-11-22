@@ -109,7 +109,7 @@ const HeaderItems = () => {
                 {<Link id="prime" href="/prime">Movie & Music</Link>}
             </span></p>
             <p><span>
-                {<Link id="prime" href="/pay">Amazon Pay</Link>}
+                {<Link id="prime" href="/">Amazon Pay</Link>}
             </span></p>
         </div>
     )

@@ -37,25 +37,10 @@ function MyApp({ Component, pageProps }) {
           <Toaster
             toastOptions={{
               style: {
-                border: '1px solid #713200',
-                padding: '16px',
-                color: 'black',
+                padding: "16px",
+                color: "black",
               },
-              // success: {
-              //   style: {
-              //     background: '#3ff23f',
-              //   },
-              // },
-              // error: {
-              //   style: {
-              //     background: '#f85151',
-              //   },
-              // },
-              // loading: {
-              //   style: {
-              //     background: '#bcbcbc',
-              //   },
-              // },
+              position: "bottom center", // Set the position to "bottom"
             }}
           />
           <Component {...pageProps} />

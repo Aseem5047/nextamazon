@@ -2,18 +2,17 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import AmazonLogo from '../assets/Amazon_Logo.png'
 import SearchIcon from '@material-ui/icons/Search'
-import { MapPinIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { MapPinIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import { Autocomplete, TextField, Tooltip } from '@mui/material'
+import { Autocomplete, TextField } from '@mui/material'
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUser, logoutInitiate, setUser } from '../features/authSlice'
+import { logoutInitiate } from '../features/authSlice'
 import Dropdown from './DropDown'
 import { toast } from 'react-hot-toast';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
-import { AiOutlineShoppingCart, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineClose } from 'react-icons/ai'
 import { selectBasketItems } from '../features/basketSlice'
 import ReactTooltip from 'react-tooltip';
 
@@ -229,48 +228,37 @@ const Navbar = () => {
 
                 {
                     toggleMenu && (
-                        <div className="flex flex-col items-end p-4 bg-[#131921] absolute top-[3.2rem] right-[0.5rem] w-52 rounded-lg z-20">
+                        <div className="flex flex-col items-start p-4 pb-6 bg-[#131921] absolute top-[3.2rem] right-[0.5rem] w-52 rounded-xl z-20">
 
-                            <div data-tip={`${user ? "User Sign Out" : "User Log In"}`} onClick={handleAuth} className="text-white flex items-center mt-[10px] cursor-pointer">
-                                {user?.photoURL ? <Image src={user.photoURL} width={100}
-                                    height={100} alt="" className="user_image" /> : <Image src="/defaultProfile.png" alt=""
-                                        width={100} height={100}
-                                        className="user_image" />}
+                            <div data-tip={`${user ? "User Sign Out" : "User Log In"}`} onClick={handleAuth} className=" flex items-center justify-center w-full mt-[10px] cursor-pointer">
+                                {user?.photoURL ? <Image src={user.photoURL} width={100} height={100} alt="" className="user_image w-[4rem] h-[4rem]" /> : <Image src="/defaultProfile.png" alt=""
+                                    width={100} height={100}
+                                    className="user_image w-[5rem] h-[5rem]" />}
                             </div>
                             <ReactTooltip place="bottom" type="dark" effect="solid" />
 
-                            <Link href={`${user ? "/account" : "/"}`} className="text-white mt-2">
+                            <Link data-tip="Account" href={`${user ? "/account" : "/"}`} className=" mt-2 text-center w-full">
                                 <div className="header-option userInfo">
-                                    <div className="flex flex-col items-end">
+                                    <div className="flex flex-col items-center ">
                                         <span className="header-option1">Hello, {user ? user?.displayName?.toUpperCase() || user.email : "Guest"}</span>
                                         <span className="header-option2">Account & Lists</span>
                                     </div>
                                 </div>
                             </Link>
+                            <ReactTooltip place="bottom" type="dark" effect="solid" />
 
                             <Link data-tip="Orders" href="/orders" className="header-link">
-                                <div className="header-option items-end">
-                                    <span className="header-option1">Returns</span>
-                                    <span className="header-option2">& Orders</span>
-                                </div>
+                                <span className="header-option1 ml-2">Returns & Orders</span>
                             </Link>
                             <ReactTooltip place="bottom" type="dark" effect="solid" />
-
 
                             <Link data-tip="Prime" href="/prime" className="header-link" id="HeaderPrime">
-                                <div className="header-option items-end">
-                                    <span className="header-option1">Your</span>
-                                    <span className="header-option2">Prime</span>
-                                </div>
+                                <span className="header-option1 ml-2">Your Prime</span>
                             </Link>
                             <ReactTooltip place="bottom" type="dark" effect="solid" />
 
-
-                            <Link data-tip="Cart" href="/checkout" className="header-link">
-                                <div className="navbar_text navbar__cart ">
-                                    <div src="" className="cart__image" id="Cart" ></div>
-                                    <div className="cart__item_mobileMenu"> {basket && basket.length} </div>
-                                </div>
+                            <Link data-tip="Checkout" href="/checkout" className="header-link" id="HeaderPrime">
+                                <span className="header-option1 ml-2">Your Cart</span>
                             </Link>
                             <ReactTooltip place="bottom" type="dark" effect="solid" />
 
