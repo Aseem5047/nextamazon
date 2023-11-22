@@ -30,7 +30,7 @@ const Dropdown = () => {
                         <div className="flex flex-col justify-around">
 
                             {icons.map((icon, index) =>
-                                <div key={index}>
+                                <div key={`icon-${index}`}>
                                     <span>
                                         {icon}
                                     </span>
@@ -39,13 +39,12 @@ const Dropdown = () => {
                         </div>
                         <div className="flex flex-col justify-evenly">
                             {options.map((option, index) =>
-                                <Link href={`/${option.toLowerCase().split(" ").join("")}`} key={index}>
+                                <Link href={`/${option.toLowerCase().split(" ").join("")}`} key={`option-${index}`}>
                                     <div className="hover:line-through cursor-pointer">
                                         <span>{option}</span>
                                     </div>
                                 </Link>
-                            )
-                            }
+                            )}
                         </div>
                     </div>
                 }
