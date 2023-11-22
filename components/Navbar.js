@@ -81,9 +81,9 @@ const Navbar = () => {
             {/* left */}
             <div className="flex items-center">
                 <Link data-tip="Home" href="/" className="relative ">
-                    <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                    <Image src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                         alt="Logo"
-
+                        width={100} height={100}
                         className="mt-[10px] object-contain ml-6 mr-4 w-[80px] md:w-[100px]"
                     />
                 </Link>

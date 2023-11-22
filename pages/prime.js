@@ -33,7 +33,7 @@ const Prime = () => {
                             <span className="md:mt-[7.5] font-medium text-[1.5rem] md:text-[2.2rem]">Welcome {user ? user.displayName || user.email : "Guest"}</span>
                             <div className="flex flex-col">
                                 <span className="text-[1rem] md:text-[1.25rem] font-medium">One simple membership, many benefits.</span>
-                                <span className="text-[1rem] md:text-[1.25rem] font-medium">Check out what's included below.</span>
+                                <span className="text-[1rem] md:text-[1.25rem] font-medium">Check out what is included below.</span>
                                 <span className="text-[1rem] md:text-[1.25rem] font-medium">The best of shopping and entertainment is all yours.</span>
                             </div>
                         </div>

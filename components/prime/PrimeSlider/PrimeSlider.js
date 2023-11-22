@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { SliderItems } from './Data/SliderItems'
 import { FeatureList } from './Data/FeatureList'
+import Image from 'next/image';
 
 const PrimeSlider = () => {
     const [type, setType] = useState("");
@@ -128,7 +129,7 @@ const PrimeSlider = () => {
                 </ul >
             </div >
             <div className="max-w-[90vw] m-auto mt-[6rem] md:mt-[1rem] md:h-auto h-[15vh]">
-                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/prrrefresh/June/2022/PMP_Page_1500x300_px.jpg" alt="" style={{ width: "100%", height: "100%" }} />
+                <Image width={200} height={200} src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/prrrefresh/June/2022/PMP_Page_1500x300_px.jpg" alt="" style={{ width: "100%", height: "100%" }} />
             </div>
         </div>
     )

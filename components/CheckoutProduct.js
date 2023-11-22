@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react'
 import { toast } from 'react-hot-toast';
 import { removeFromBasket } from '../features/basketSlice';
@@ -22,7 +21,7 @@ const CheckoutProduct = ({ id, title, image, rating, price, details, quantity })
 
     return (
         <div className="flex flex-col md:flex-row items-center mb-20">
-            <img src={image} alt="" className="object-contain w-[200px] h-[200px] mix-blend-multiply rounded-md lg:mr-16 md:mr=13 mr-7" />
+            <Image src={image} width={200} height={200} alt="" className="object-contain w-[200px] h-[200px] mix-blend-multiply rounded-md lg:mr-16 md:mr=13 mr-7" />
             <div className="flex flex-col text-left items-start -mt-[2rem] !max-w-[30rem] w-full p-10 md:p-2 lg:pd-0">
                 <p className=" text-2xl lg:text-[20px] lg:font-bold text-black font-semibold md:text-[4rem] text-left whitespace-nowrap w-[150px] overflow-ellipsis">{title}</p>
                 <div className="flex">

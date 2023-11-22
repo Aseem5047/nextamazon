@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '../features/basketSlice';
 import Gallery from './Gallery';
+import Image from 'next/image';
 
 const CurrentProduct = ({ SingleProduct }) => {
 
@@ -37,7 +38,7 @@ const CurrentProduct = ({ SingleProduct }) => {
 
     return (
         <div className="flex flex-col space-y-10 lg:flex-row items-center justify-between mt-3">
-            {imageArr.length === 1 ? <img src={imageArr[0]} className="single-product-image" alt="" /> :
+            {imageArr.length === 1 ? <Image src={imageArr[0]} width={350} height={300} className="single-product-image" alt="" /> :
                 <Gallery image={imageArr} title={SingleProduct.title} />
             }
 

@@ -3,7 +3,7 @@ import React from 'react'
 import { Footer } from '../components/Footer'
 import HeaderItems from '../components/HeaderItems'
 import Navbar from '../components/Navbar'
-import Success from '../components/Success'
+import OrderSuccess from '../components/OrderSuccess'
 
 const Success = () => {
     return (

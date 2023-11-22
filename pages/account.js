@@ -78,7 +78,7 @@ const Account = () => {
                             <>
                                 <Link href={`${item.link}`} key={id}>
                                     <div className="flex md:flex-col text-center gap-4 w-[18rem] border border-[#e4e3e3] p-4 rounded-xl cursor-pointer hover:bg-[#e4e3e3] items-center justify-center">
-                                        <img src={item.image} alt="" className='w-16 h-[3.5rem]' />
+                                        <Image src={item?.image} width={64} height={15} alt="" className='w-16 h-[3.5rem]' />
                                         <div className="flex flex-col text-black">
                                             <span style={{ fontSize: "1.1rem" }}>{item.title}</span>
                                             <span style={{ fontSize: "0.85rem" }}>{item.info}</span>

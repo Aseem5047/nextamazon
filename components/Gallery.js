@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 
 function Gallery({ image, title }) {
@@ -69,8 +70,8 @@ function Gallery({ image, title }) {
             <Slider {...settings} className="w-full md:w-[30rem] m-auto mb-4">
                 {image.map((img, index) => (
 
-                    <div className="flex flex-col justify-center items-center hover:shadow-xl p-10 pb-5 cursor-pointer">
-                        <img src={img} className="m-auto h-[300px] w-[350px] rounded-xl" />
+                    <div className="flex flex-col justify-center items-center hover:shadow-xl p-10 pb-5 cursor-pointer" key={index}>
+                        <Image alt="" width={350} height={300} src={img} className="m-auto h-[300px] w-[350px] rounded-xl" />
                         <p className="legend text-center mt-6 font-semibold text-xl">{title}</p>
                     </div>
                 ))}
@@ -81,7 +82,7 @@ function Gallery({ image, title }) {
                 {image.map((img, index) => (
 
                     <div className="flex flex-col justify-center items-center  p-10 pb-4 cursor-pointer hover:shadow-xl" key={index}>
-                        <img src={img} className="m-auto h-[125px] w-[200px] rounded-xl" />
+                        <Image alt="" width={200} height={125} src={img} className="m-auto h-[125px] w-[200px] rounded-xl" />
                     </div>
                 ))}
 

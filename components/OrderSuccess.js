@@ -14,7 +14,7 @@ import { useRouter } from 'next/router';
 import { parseCookies, setCookie } from "nookies";
 
 
-const Success = () => {
+const OrderSuccess = () => {
 
   const dispatch = useDispatch();
   const [clientSecret, setClientSecret] = useState(true);
@@ -98,4 +98,4 @@ const Success = () => {
   )
 }
 
-export default Success
+export default OrderSuccess
