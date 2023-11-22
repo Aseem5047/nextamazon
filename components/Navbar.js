@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import SearchIcon from '@material-ui/icons/Search'
 import { MapPinIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { Autocomplete, TextField } from '@mui/material'
@@ -18,7 +17,7 @@ import ReactTooltip from 'react-tooltip';
 
 
 const options = [
-    'home',
+
     'trending',
     'mobiles',
     'electronics',
@@ -40,7 +39,7 @@ const Navbar = () => {
     const [pin, setPin] = useState('')
     const [selectAddress, setSelectAddress] = useState(false)
 
-    const [value, setValue] = useState("home");
+    const [value, setValue] = useState("trending");
 
     const user = useSelector(state => state.auth.user);
     const basket = useSelector(selectBasketItems);
@@ -159,7 +158,14 @@ const Navbar = () => {
                         onKeyDown={handleKeyDown}
                     />
 
-                    <button className="hidden md:inline-flex authButton my-auto w-16 ml-2 h-full" type="submit" onClick={onSubmit} onKeyDown={handleKeyDown}><SearchIcon className="text-yellow m-auto font-extrabold" /></button>
+                    <button className="hidden md:inline-flex authButton my-auto w-16 ml-2 h-full" type="submit" onClick={onSubmit} onKeyDown={handleKeyDown}>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 m-auto font-bold ">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+
+
+                    </button>
 
                 </div>
 

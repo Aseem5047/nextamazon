@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import basketReducer from './features/basketSlice'
 import authReducer from './features/authSlice'
-import { getDefaultMiddleware } from '@reduxjs/toolkit';
+// import { getDefaultMiddleware } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage'
 import { combineReducers } from "redux";
 import { persistReducer } from 'redux-persist'

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Image from 'next/image';
 
 const Banner = ({ images }) => {
@@ -45,12 +43,18 @@ const Banner = ({ images }) => {
                 );
             })}
 
-            <p className="prev hover:bg-black p-7 rounded-full" onClick={() => setIndex(index - 1)}>
-                <ArrowBackIosIcon />
+            <p className="prev hover:bg-black/75 rounded-full w-16 h-16" onClick={() => setIndex(index - 1)}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-gray-400 hover:text-white">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+
             </p>
 
-            <p className="next hover:bg-black p-7 rounded-full" onClick={() => setIndex(index + 1)}>
-                <ArrowForwardIosIcon />
+            <p className="next  hover:bg-black/75 rounded-full w-16 h-16" onClick={() => setIndex(index + 1)}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-gray-400 hover:text-white">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+
             </p>
 
         </div>

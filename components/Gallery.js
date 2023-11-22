@@ -3,8 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+
 
 function Gallery({ image, title }) {
 
@@ -40,11 +39,15 @@ function Gallery({ image, title }) {
         // prevArrow: <PrevArrow />
     };
 
+    // hidden md:flex next top-[14rem] -right-20 md:hover:bg-black p-7 rounded-full
+
     function NextArrow(props) {
         const { className, style, onClick } = props;
         return (
-            <p className="hidden md:flex next top-[14rem] -right-20 md:hover:bg-black p-7 rounded-full" onClick={onClick} >
-                <ArrowForwardIosIcon />
+            <p className="hidden md:flex next top-[14rem] -right-20 hover:bg-black/75 rounded-full w-16 h-16" onClick={onClick} >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-gray-400 hover:text-white">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
             </p>
         );
     }
@@ -52,8 +55,10 @@ function Gallery({ image, title }) {
     function PrevArrow(props) {
         const { className, style, onClick } = props;
         return (
-            <p className="hidden md:flex prev top-[14rem] -left-20  md:hover:bg-black p-7 rounded-full" onClick={onClick} >
-                <ArrowBackIosIcon />
+            <p className="hidden md:flex prev top-[14rem] -left-20 hover:bg-black/75 rounded-full w-16 h-16" onClick={onClick} >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-gray-400 hover:text-white">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
             </p>
         );
     }
@@ -66,7 +71,7 @@ function Gallery({ image, title }) {
 
                     <div className="flex flex-col justify-center items-center hover:shadow-xl p-10 pb-5 cursor-pointer">
                         <img src={img} className="m-auto h-[300px] w-[350px] rounded-xl" />
-                        <p className="legend" className="text-center mt-6 font-semibold text-xl">{title}</p>
+                        <p className="legend text-center mt-6 font-semibold text-xl">{title}</p>
                     </div>
                 ))}
 

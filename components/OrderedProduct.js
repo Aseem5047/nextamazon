@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React from 'react'
 import { toast } from 'react-hot-toast';
 import { removeFromBasket } from '../features/basketSlice';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import { useDispatch } from 'react-redux';
 
 // number formatter.

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+
 
 
 const images = [
@@ -57,12 +56,16 @@ const Songs = () => {
 
                             <div className="EntertainmentLeft" onClick={() => setIndex(index - 1)}>
                                 <p>
-                                    <ArrowBackIosIcon />
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-black ">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                    </svg>
                                 </p>
                             </div>
                             <div className="EntertainmentRight" onClick={() => setIndex(index + 1)}>
                                 <p>
-                                    <ArrowForwardIosIcon />
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-black ">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                    </svg>
                                 </p>
                             </div>
                         </li>

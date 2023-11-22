@@ -1,10 +1,7 @@
 import * as React from 'react';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { selectBasketItems } from '../features/basketSlice';
 import { useSelector } from 'react-redux';
 import PaymentCheckoutProduct from './PaymentCheckoutProduct';
-import HorizontalScroll from 'react-horizontal-scrolling'
 
 const Review = () => {
     const [groupedItemsInBasket, setGroupedItemsInBasket] = React.useState([])

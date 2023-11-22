@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React, { useMemo, useState } from 'react'
 import { AiOutlineHome } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 
 import {
     Banner14,
@@ -31,7 +30,7 @@ import CheckoutProduct from '../components/CheckoutProduct';
 import { Footer } from '../components/Footer';
 import HeaderItems from '../components/HeaderItems';
 import Navbar from '../components/Navbar';
-import SubTotal from '../components/Subtotal';
+import SubTotal from '../components/SubTotal';
 import { getUser } from '../features/authSlice';
 import { selectBasketItems } from '../features/basketSlice';
 
@@ -67,10 +66,12 @@ const Checkout = () => {
                 <div className="flex flex-col items-center justify-center ">
                     <div className="flex flex-col text-center md:mt-[6rem] lg:mt-[8rem] py-4">
                         <h3 className="text-xl font-bold">Hello, {user ? user.email : "Guest"}</h3>
-                        <h2 className="text-lg font-semibold">
+                        <h2 className="text-lg font-semibold mt-2 ">
                             {basket.length === 0 ? "No Product added - Empty Cart" : (
-                                <div className="flex text-xl items-center justify-center text-center">
-                                    <ShoppingCartOutlinedIcon />
+                                <div className="flex gap-2 text-xl items-center justify-center text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                    </svg>
                                     <span className="font-semibold text-[#fcba03]">Cart</span>
                                 </div>
                             )}
