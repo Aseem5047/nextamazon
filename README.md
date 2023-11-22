@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://user-images.githubusercontent.com/80787027/215532770-9c2e051e-0bd9-44e3-8323-d8f911b78c98.png)
 
-## Getting Started
+Introducing Amazon clone, built with React. Experience lightning-fast performance and a seamless shopping experience. Shop millions of products, easily compare prices and features, and enjoy secure and convenient checkout. Discover the future of online shopping with this Amazon clone.
 
-First, run the development server:
+![Screenshot 2023-01-30 214231](https://user-images.githubusercontent.com/80787027/215531205-9c87be7a-8fa8-4e35-a1ef-53524b733e24.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# Tech Used
+  * ReactJs
+  * Firebase Auth
+  *  Firebase Storage
+  * React-Dom
+  * React Redux
+  * Stripe payment
+    
+# Features
+  * Login and Logout
+  * Add to cart
+  * Remove from cart
+  * Payment
+  * Neat and clean UI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![image](https://user-images.githubusercontent.com/80787027/229798622-9fe91237-2a71-4a81-b8be-f18a60d720e7.png)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Steps to run in your machine
+### Run the following commands
+  * Download the code on your machine
+  * npm i
+  * npm run start
+  * To make stripe payment work you need to type npm run both
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+![image](https://user-images.githubusercontent.com/80787027/229798810-7116252a-171e-4032-ba6d-bdb6cc3c877f.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![image](https://user-images.githubusercontent.com/80787027/229800725-4d464565-4e4b-4989-9e12-6f27641bfbc0.png)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](https://user-images.githubusercontent.com/80787027/229800946-3e99aa86-3e2b-4420-a711-b6133d2c3399.png)
