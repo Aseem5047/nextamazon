@@ -51,7 +51,6 @@ const Checkout = () => {
         setGroupedItemsInBasket(groupedItems)
     }, [basket])
 
-    // console.log(basket);
     return (
         <div className="checkout">
             <Head>

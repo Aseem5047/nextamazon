@@ -10,18 +10,18 @@ var formatter = new Intl.NumberFormat('en-IN', {
     currency: 'INR',
 });
 
-const CheckoutProduct = ({ id, title, image, rating, price, details, quantity }) => {
-
+const CheckoutProduct = (props) => {
+    const { id, title, image, rating, price, details, quantity } = props;
     let dispatch = useDispatch();
 
     const removeItemFromBasket = () => {
         dispatch(removeFromBasket(id))
         toast.success(`Item removed`)
     }
-
+    console.log(props);
     return (
         <div className="flex flex-col md:flex-row items-center mb-20">
-            <Image src={image} width={200} height={200} alt="" className="object-contain w-[200px] h-[200px] mix-blend-multiply rounded-md lg:mr-16 md:mr=13 mr-7" />
+            <Image src={image[0]} width={200} height={200} alt="" className="object-contain w-[200px] h-[200px] mix-blend-multiply rounded-md lg:mr-16 md:mr=13 mr-7" />
             <div className="flex flex-col text-left items-start -mt-[2rem] !max-w-[30rem] w-full p-10 md:p-2 lg:pd-0">
                 <p className=" text-2xl lg:text-[20px] lg:font-bold text-black font-semibold md:text-[4rem] text-left whitespace-nowrap w-[150px] overflow-ellipsis">{title}</p>
                 <div className="flex">

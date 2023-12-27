@@ -47,7 +47,6 @@ const Banner = ({ images }) => {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-gray-400 hover:text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
-
             </p>
 
             <p className="next  hover:bg-black/75 rounded-full w-16 h-16" onClick={() => setIndex(index + 1)}>
