@@ -39,8 +39,10 @@ export default async function handler(req, res) {
                     }
                 }),
 
-                success_url: `http://localhost:3000/success`,
-                cancel_url: `http://localhost:3000/`,
+                success_url: `https://nextamazonxxx.vercel.app/success`,
+                cancel_url: `https://nextamazonxxx.vercel.app/`,
+                // success_url: `http://localhost:3000/success`,
+                // cancel_url: `http://localhost:3000/`,
             }
 
             // Create Checkout Sessions from body params.
